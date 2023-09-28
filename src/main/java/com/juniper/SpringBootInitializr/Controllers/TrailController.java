@@ -3,7 +3,7 @@ package com.juniper.SpringBootInitializr.Controllers;
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.jms.core.JmsTemplate;
+// import org.springframework.jms.core.JmsTemplate;
 import org.springframework.web.bind.annotation.*;
 import com.juniper.SpringBootInitializr.Models.Trail;
 import com.juniper.SpringBootInitializr.Services.*;
