@@ -14,11 +14,11 @@ public class TrailController {
     
     private final TrailService tService;
     // private final MessagingService mService;
-	private final JmsTemplate jmsTemplate;
-    private static final String QUEUE_NAME = "busqueue";
-    public TrailController(TrailService tService, JmsTemplate jmsTemplate) {
+	// private final JmsTemplate jmsTemplate;
+    // private static final String QUEUE_NAME = "busqueue";
+    public TrailController(TrailService tService) {
         this.tService = tService;
-        this.jmsTemplate = jmsTemplate;
+        // this.jmsTemplate = jmsTemplate;
 
     }
 
@@ -31,7 +31,7 @@ public class TrailController {
             return tService.getTrailsByDescription(description);
         }
         // mService.sendMessage("getting all trails");
-        jmsTemplate.convertAndSend(QUEUE_NAME, "Received Request to /Get Trail endpoint");
+        // jmsTemplate.convertAndSend(QUEUE_NAME, "Received Request to /Get Trail endpoint");
         return tService.getAllTrails();
     }
 
